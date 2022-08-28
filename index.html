@@ -39,55 +39,131 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div
+  class="overlay"
+  style="background: #4d4d4d"
+>
+  <!-- 《添加“心知天气”-->
+  
+  <div id="tp-weather-widget"></div>
+  <script>
+    (function (T, h, i, n, k, P, a, g, e) {
+      g = function () {
+        P = h.createElement(i);
+        a = h.getElementsByTagName(i)[0];
+        P.src = k;
+        P.charset = "utf-8";
+        P.async = 1;
+        a.parentNode.insertBefore(P, a);
+      };
+      T["ThinkPageWeatherWidgetObject"] = n;
+      T[n] ||
+        (T[n] = function () {
+          (T[n].q = T[n].q || []).push(arguments);
+        });
+      T[n].l = +new Date();
+      if (T.attachEvent) {
+        T.attachEvent("onload", g);
+      } else {
+        T.addEventListener("load", g, false);
+      }
+    })(
+      window,
+      document,
+      "script",
+      "tpwidget",
+      "//widget.thinkpage.cn/widget/chameleon.js"
+    );
+  </script>
+  <script>
+    tpwidget("init", {
+      flavor: "slim",
+      location: "WM6N2PM3WY2K",
+      geolocation: "enabled",
+      language: "zh-chs",
+      unit: "c",
+      theme: "chameleon",
+      container: "tp-weather-widget",
+      bubble: "enabled",
+      alarmType: "badge",
+      color: "#FFFFFF",
+      uid: "U88B4B2797",
+      hash: "c9d7cb43b80ffece52c9a1ebbfbca65f",
+    });
+    tpwidget("show");
+  </script>
+  
+  <!-- 添加“心知天气”》-->
+</div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="/img/avatar.jpeg" class="js-avatar">
-		</a>
-		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
-		</hgroup>
-		
+  <header id="header" class="inner">
+    <a href="/" class="profilepic">
+      <img src="/assets/avatar.jpeg" class="js-avatar" />
+    </a>
+    <hgroup>
+      <h1 class="header-author">
+        <a href="/">起风了</a>
+      </h1>
+    </hgroup>
+    
 
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu">
-    		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="https://github.com/darkTang" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
-			</div>
-		</nav>
-	</header>		
+    <nav class="header-menu">
+      <ul>
+        
+        <li><a href="/">主页</a></li>
+        
+        <li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+        
+        <li><a href="/archives/index.html">归档</a></li>
+        
+        <li><a href="/categories">分类</a></li>
+        
+      </ul>
+    </nav>
+    <nav style="font-size: 14px; color: #696969">
+      总文章数 1
+    </nav>
+    <nav class="header-smart-menu">
+       
+      <a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)"
+        >所有文章</a
+      >
+          
+      <a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)"
+        >关于我</a
+      >
+       
+    </nav>
+    <nav class="header-nav">
+      <div class="social">
+        
+        <a
+          class="github"
+          target="_blank"
+          href="https://github.com/darkTang"
+          title="github"
+          ><i class="icon-github"></i
+        ></a>
+        
+        <a
+          class="weibo"
+          target="_blank"
+          href="https://weibo.com/u/6326079994"
+          title="weibo"
+          ><i class="icon-weibo"></i
+        ></a>
+        
+        <a
+          class="bilibili"
+          target="_blank"
+          href="https://space.bilibili.com/222856220?spm_id_from=333.1007.0.0"
+          title="bilibili"
+          ><i class="icon-bilibili"></i
+        ></a>
+        
+      </div>
+    </nav>
+  </header>
 </div>
 
     </div>
@@ -101,13 +177,17 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/avatar.jpeg" class="js-avatar">
+				<img src="/assets/avatar.jpeg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">起风了</h1>
 			</hgroup>
 			
 			
+			
+				
+			
+				
 			
 				
 			
@@ -120,22 +200,24 @@
 					
 						<a class="github" target="_blank" href="https://github.com/darkTang" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/u/6326079994" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/222856220?spm_id_from=333.1007.0.0" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -164,9 +246,13 @@
   
 
         
-        <a href="/2022/08/28/tepora%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2022-08-28T02:20:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-28</time>
+        
+<a href="/2022/08/28/tepora%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  <time datetime="2022-08-28T02:20:37.000Z" itemprop="datePublished"
+    ><i class="icon-calendar icon"></i>2022-08-28</time
+  >
 </a>
+
         
       </header>
     
@@ -176,71 +262,9 @@
 <h4 id="2-标题"><a href="#2-标题" class="headerlink" title="2. 标题"></a>2. 标题</h4><p><span style="background: #eef0f4;">输入 #+空格+标题名称+回车 ，记住一定要有空格！######最多支持六级标题</span></p>
 <h4 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3. 代码块"></a>3. 代码块</h4><p><span style="background: #eef0f4;">输入三个波浪号 ~~~ 或 三个反引号 &#96;&#96;&#96;（要在英文输入法中）回车，若要显示行号，可以在设置中的 Markdown 设置显示行号即可</span></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-引用块"><a href="#4-引用块" class="headerlink" title="4. 引用块"></a>4. 引用块</h4><p><span style="background: #eef0f4;">输入 &gt;   回车 或者 直接输入文字即可</span></p>
-<blockquote>
-<p>一级引用</p>
-<blockquote>
-<p>二级引用</p>
-<blockquote>
-<p>三级引用</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h4 id="5-分割线"><a href="#5-分割线" class="headerlink" title="5. 分割线"></a>5. 分割线</h4><p><span style="background: #eef0f4;">输入 —   或者 *** 回车</span></p>
-<hr>
-<h4 id="6-列表清单"><a href="#6-列表清单" class="headerlink" title="6. 列表清单"></a>6. 列表清单</h4><p><span style="background: #eef0f4;">输入 数字 + 空格，自动生成有序列表</span></p>
-<p><span style="background: #eef0f4;">输入 * + 空格自动生成无序列表</span></p>
-<p><span style="background: #eef0f4;">输入 * [ ] ,添加清单功能</span></p>
-<p><span style="background: #eef0f4;">输入列表的同时按下 tab 键还会出现三级列表</span></p>
-<ol>
-<li>三级列表列表<ul>
-<li><ul>
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>无序列表<ul>
-<li><input checked="" disabled="" type="checkbox"> 清单 1</li>
-<li><input checked="" disabled="" type="checkbox"> 清单 2</li>
-</ul>
-</li>
-</ul>
-<h4 id="7-插入图片视频和链接"><a href="#7-插入图片视频和链接" class="headerlink" title="7. 插入图片视频和链接"></a>7. 插入图片视频和链接</h4><p>插入链接：[描述文字](url 地址)</p>
-<p><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a></p>
-<p><span style="background:#eef0f4;">插入图片有两种方式</span></p>
-<ul>
-<li><p>![图片的注释 alt](src 路径)</p>
-</li>
-<li><p><code>&lt;img alt=&quot;&quot; src=&quot;&quot;&gt;&lt;/img&gt;</code></p>
-</li>
-</ul>
-<p><img src="https://rqm-1310837901.cos.ap-guangzhou.myqcloud.com/uPic/head.jpg" alt="head"></p>
-<p><span style="background:#eef0f4;">插入视频的方式</span></p>
-<p><code>&lt;video src=&quot;&quot;&gt;&lt;/video&gt;</code></p>
-<h4 id="8-上传图片的方式"><a href="#8-上传图片的方式" class="headerlink" title="8. 上传图片的方式"></a>8. 上传图片的方式</h4><p>上传图片方式大家可以看这篇文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/344941041">上传图片的方式</a></p>
-<h4 id="9-字体格式和颜色"><a href="#9-字体格式和颜色" class="headerlink" title="9. 字体格式和颜色"></a>9. 字体格式和颜色</h4><p><code>**加粗内容**</code><br><strong>加粗内容</strong><br><code>*斜体*</code><br><em>斜体</em><br><code>~~删除线~~ </code><br><del>删除线</del><br><code>&lt;u&gt;下划线&lt;/u&gt;</code><br><u>下划线</u></p>
-<p><code>&lt;span style=&quot;background:#eef0f4;&quot;&gt;浅灰色背景&lt;/span&gt;</code><br><code>&lt;span style=&quot;background:#fbd4d0;&quot;&gt;浅红色背景&lt;/span&gt;</code><br><code>&lt;span style=&quot;background:#d4e9d5;&quot;&gt;浅绿色背景&lt;/span&gt;</code><br><code>&lt;span style=&quot;background:#dad5e9;&quot;&gt;浅紫色背景&lt;/span&gt;</code><br><code>&lt;span style=&quot;background:#f9eda6;&quot;&gt;浅黄色背景&lt;/span&gt;</code><br><code>&lt;span style=&quot;background:#f9eda6;color:red&quot;&gt;浅黄色背景红色字体&lt;/span&gt;</code></p>
-<p><span style="background:#eef0f4;">浅灰色背景</span><br><span style="background:#fbd4d0;">浅红色背景</span><br><span style="background:#d4e9d5;">浅绿色背景</span><br><span style="background:#dad5e9;">浅紫色背景</span><br><span style="background:#f9eda6;">浅黄色背景</span><br><span style="background:#f9eda6;color:red">浅黄色背景红色字体</span></p>
-<h4 id="10-插入表格"><a href="#10-插入表格" class="headerlink" title="10. 插入表格"></a>10. 插入表格</h4><p><span style="background:#eef0f4;">|标题 1|标题 2|，然后回车</span></p>
-<table>
-<thead>
-<tr>
-<th>标题 1</th>
-<th>标题 2</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h4 id="11-彩蛋"><a href="#11-彩蛋" class="headerlink" title="11. 彩蛋"></a>11. 彩蛋</h4><p><span style="background:#eef0f4;">输入 :smile, 可以看到很多表情</span></p>
-<p><img src="https://rqm-1310837901.cos.ap-guangzhou.myqcloud.com/uPic/image-20220828163818355.png" alt="image-20220828163818355"></p>
-
+        
+          <a class="article-more-a" href="/2022/08/28/tepora%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more">more >></a>
+        
       
 
       
@@ -255,11 +279,30 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tepora</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人博客//" class="article-tag-list-link color5">个人博客</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人博客/yilia//" class="article-tag-list-link color1">yilia</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -302,15 +345,21 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2022 darkTang
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+      <div class="footer-left">
+        &copy; 2022 darkTang
+      </div>
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+        <a href="https://github.com/litten/hexo-theme-yilia" target="_blank"
+          >Yilia</a
+        >
+        by Litten
+      </div>
     </div>
   </div>
+  
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -344,8 +393,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -357,15 +404,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -387,6 +432,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tepora</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
@@ -432,38 +481,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
